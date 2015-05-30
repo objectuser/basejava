@@ -1,4 +1,4 @@
-FROM phusion/baseimage:latest
+FROM phusion/passenger-customizable:latest
 
 # Download and install Java
 ADD getjdk.sh /tmp/build/getjdk.sh
