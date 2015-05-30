@@ -1,7 +1,7 @@
 # basejava
 A base image for Java apps.
 
-This image is based on [phusion/baseimage](https://github.com/phusion/baseimage-docker).
+This image is based on [phusion/passenger-customizable](https://github.com/phusion/passenger-customizable).
 
 The way I use it is to add my app to the image and an init script to run the app.
 
@@ -24,14 +24,7 @@ The `0-app.sh` file might be like this:
 
 ```
 #!/bin/sh
-java -jar boot-hello.jar
+. /etc/profile.d/oraclejdk.sh
+setuser app java -jar boot-hello.jar
 ```
 
-# How It Works
-
-Oracle Java is installed as a package. The `/etc/environment` file is replaced with:
-
-```
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/oracle_jdk8/bin"
-JAVA_HOME="/usr/lib/jvm/oracle_jdk8"
-```
