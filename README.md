@@ -24,7 +24,14 @@ The `0-app.sh` file might be like this:
 
 ```
 #!/bin/sh
-
 java -jar boot-hello.jar
 ```
 
+# How It Works
+
+Oracle Java is installed as a package. The `/etc/environment` file is replaced with:
+
+```
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/oracle_jdk8/bin"
+JAVA_HOME="/usr/lib/jvm/oracle_jdk8"
+```
