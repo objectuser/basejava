@@ -1,8 +1,8 @@
 #!/bin/sh
 set -x
 
-jdk_url=http://download.oracle.com/otn-pub/java/jdk/8u66-b17
-jdk_archive_name=server-jre-8u66-linux-x64.tar.gz
+jdk_url=http://download.oracle.com/otn-pub/java/jdk/8u73-b02
+jdk_archive_name=server-jre-8u73-linux-x64.tar.gz
 jdk_destination=/usr/lib/jvm/oracle_jdk8
 
 curl -v -j -k -L \
